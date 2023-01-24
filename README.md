@@ -1,7 +1,7 @@
 this is entirely desined by Yohanes Nico 
 (https://dribbble.com/shots/20461078-Fashion-Campus-Fashion-E-Commerce-Mobile-Apps)
 
-I just used it as Inspiration and to test my UI coding skills.
+I just used it as Inspiration to test my UI coding skills.
 
 Screenshots:
 
