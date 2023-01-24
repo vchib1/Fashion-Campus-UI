@@ -1,4 +1,5 @@
 import 'package:fashioncampus/constants/colors.dart';
+import 'package:fashioncampus/screens/fullscreen_view.dart';
 import 'package:fashioncampus/widgets/size_listview.dart';
 import 'package:flutter/material.dart';
 
@@ -24,46 +25,70 @@ class FullScreen extends StatelessWidget {
       body: Column(
         children: [
           Hero(
-            tag: casualPhotos[index].imageUrl,
-            child: Container(
-              height: MediaQuery.of(context).size.height * .5,
-              alignment: Alignment.topCenter,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(imageUrl),
-                  fit: BoxFit.cover,
-                )
-              ),
-              child: SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        height: 50,
-                        width: 50,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                            color: blackColor2,
-                            borderRadius: notificationBorder
-                        ),
-                        child: IconButton(
-                          onPressed: (){
-                            Navigator.pop(context);
-                          },
-                          icon: const Icon(
-                            Icons.arrow_back,
-                            color: greyColor,
-                            size: 26,
+            tag: imageUrl,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ViewImage(imageUrl: imageUrl,index: index),));
+              },
+              child: Container(
+                height: MediaQuery.of(context).size.height * .5,
+                alignment: Alignment.topCenter,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(imageUrl),
+                    fit: BoxFit.cover,
+                  )
+                ),
+                child: SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 50,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                              color: blackColor2,
+                              borderRadius: notificationBorder
+                          ),
+                          child: IconButton(
+                            onPressed: (){
+                              Navigator.pop(context);
+                            },
+                            icon: const Icon(
+                              Icons.arrow_back,
+                              color: greyColor,
+                              size: 26,
+                            ),
                           ),
                         ),
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
+                        Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                height: 50,
+                                width: 50,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                    color: blackColor2,
+                                    borderRadius: notificationBorder
+                                ),
+                                child: IconButton(
+                                  onPressed: (){
+                                    Navigator.pop(context);
+                                  },
+                                  icon: const Icon(
+                                    Icons.favorite,
+                                    color: pinkColor2,
+                                    size: 26,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Container(
                               height: 50,
                               width: 50,
                               alignment: Alignment.center,
@@ -76,38 +101,19 @@ class FullScreen extends StatelessWidget {
                                   Navigator.pop(context);
                                 },
                                 icon: const Icon(
-                                  Icons.favorite,
-                                  color: pinkColor2,
+                                  Icons.share,
+                                  color: greyColor,
                                   size: 26,
                                 ),
                               ),
                             ),
-                          ),
-                          Container(
-                            height: 50,
-                            width: 50,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                color: blackColor2,
-                                borderRadius: notificationBorder
-                            ),
-                            child: IconButton(
-                              onPressed: (){
-                                Navigator.pop(context);
-                              },
-                              icon: const Icon(
-                                Icons.share,
-                                color: greyColor,
-                                size: 26,
-                              ),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              )
+                )
+              ),
             ),
           ),
           Container(
@@ -133,7 +139,7 @@ class FullScreen extends StatelessWidget {
                   const Text("Choose Size",style: TextStyle(fontSize: 20,color: whiteColor),),
                   const SizedBox(height: 10,),
                   const SizeListView(),
-                  const SizedBox(height: 40,),
+                  const SizedBox(height: 30,),
                   Container(
                     height: 60,
                     alignment: Alignment.center,
