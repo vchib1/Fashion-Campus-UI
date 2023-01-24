@@ -1,16 +1,11 @@
-# fashioncampus
+this is entirely desined by Yohanes Nico 
+(https://dribbble.com/shots/20461078-Fashion-Campus-Fashion-E-Commerce-Mobile-Apps)
 
-A new Flutter project.
+I just used it as Inspiration and to test my UI coding skills.
 
-## Getting Started
+Screenshots:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![1](https://user-images.githubusercontent.com/16263958/214282325-04eab9d7-65ca-4c11-9685-69d6ba4de2d8.png)
+![2](https://user-images.githubusercontent.com/16263958/214282336-7e7d6d70-a807-4e07-ae6c-270f71cd5d77.png)
+![3](https://user-images.githubusercontent.com/16263958/214282340-36bafe11-1b8b-4593-a35e-c9945fabc399.png)
+![4](https://user-images.githubusercontent.com/16263958/214282344-050ca6f2-8503-4f63-b7fb-8a5af9031a73.png)
